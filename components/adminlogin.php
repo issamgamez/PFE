@@ -81,6 +81,7 @@
 
     <div class="container-hhh">
         <div class="btn-home">
+            <h4 class="title-lo-icon">Home</h4>
             <button class="back"><a href="../index.php"><img src="../images/icon-home.png" width="30vw"
                         alt=""></a></button>
         </div>

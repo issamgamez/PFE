@@ -115,6 +115,7 @@ if(isset($_POST['regs']))
 ?>
 
     <div class="btn-btn-home">
+        <h3 class="btn-ic-ti">Home</h3>
         <button class="back-btn-bb"><a href="../index.php"><img src="../images/icon-home.png" width="50vw"
                     alt=""></a></button>
     </div>
