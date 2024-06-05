@@ -1,13 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    
     <title>REGISTRATION</title>
-   <link rel="stylesheet" href="../css/register.css" type="text/css">
+    <link rel="stylesheet" href="../css/register1.css">
+
+    <style>
+    .header-container {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        padding-top: 40px;
+    }
+
+    .header-container h1 {
+        margin-right: 20px;
+    }
+
+    .header-container button {
+        background: none;
+        border: none;
+        padding: 0;
+    }
+
+    .header-container button a img {
+        width: 30px;
+    }
+
+    .form-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .form-left,
+    .form-right {
+        width: 48%;
+    }
+
+    .form-left {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-right {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .gender {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .gender label {
+        margin-right: 10px;
+    }
+    </style>
 </head>
+
 <body>
-    
-<?php
+
+    <?php
 
 require_once('connection.php');
 if(isset($_POST['regs']))
@@ -60,154 +114,128 @@ if(isset($_POST['regs']))
 
 ?>
 
-
-    <button id="back"><a href="../index.php">HOME</a></button>
-    <h1 id="fam">JOIN OUR FAMILY OF CARS!</h1>
- <div class="main">
-        
-        <div class="register">
-        <h2>Register Here</h2>
-        
-        <form id="register" action="register.php" method="POST">    
-            <label>First Name : </label>
-            <br>
-            <input type ="text" name="fname"
-            id="name" placeholder="Enter Your First Name" required>
-            <br><br>
-
-            <label>Last Name : </label>
-            <br>
-            <input type ="text" name="lname"
-            id="name" placeholder="Enter Your Last Name" required>
-            <br><br>
-
-            <label>Email : </label>
-            <br>
-            <input type="email" name="email"
-            id="name" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="ex: example@ex.com"placeholder="Enter Valid Email" required>
-            <br><br>
-            
-            <label>Your License number : </label>
-            <br>
-            <input type="text" name="lic"
-            id="name" placeholder="Enter Your License number" required>
-            <br><br>
-
-            <label>Phone Number : </label>
-            <br>
-            <input type="tel" name="ph" maxlength="10" onkeypress="return onlyNumberKey(event)"
-            id="name" placeholder="Enter Your Phone Number" required>
-            <br><br>
-
-            
-
-            <label>Password : </label>
-            <br>
-            <input type="password" name="pass" maxlength="12"
-            id="psw" placeholder="Enter Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
-            <br><br>
-            <label>Confirm Password : </label>
-            <br>
-            <input type="password" name="cpass" 
-            id="cpsw" placeholder="Renter the password" required>
-            <br><br>
-            <tr>
-                <td><label">Gender : </label></td><br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<td>
-                    <label for="one">Male</label>
-                    <input type="radio" id="input_enabled" name="gender" value="male" style="width:200px">
-                </td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
-                <td>
-                    <label for="two">Female</label>
-                    <input type="radio" id="input_disabled" name="gender" value="female" style="width:160px" />
-                </td>
-            </tr>
-            <br><br>
-
-            <input type="submit" class="btnn"  value="REGISTER" name="regs" style="background-color: #ff7200;color: white">
-            
-        
-        
-        </input>
-            
-        </form>
-        </div> 
+    <div class="btn-btn-home">
+        <button class="back-btn-bb"><a href="../index.php"><img src="../images/icon-home.png" width="50vw"
+                    alt=""></a></button>
     </div>
+    <div class="header-container">
+        <h1 id="fam">JOIN OUR FAMILY OF CARS!</h1>
+    </div>
+    <div class="main">
+        <div class="register">
+            <h2>Register Here</h2>
+            <form id="register" action="register.php" method="POST">
+                <div class="form-container">
+                    <div class="form-left">
+                        <label>First Name:</label>
+                        <input type="text" name="fname" id="fname" placeholder="Enter Your First Name" required>
+
+                        <label>Last Name:</label>
+                        <input type="text" name="lname" id="lname" placeholder="Enter Your Last Name" required>
+
+                        <label>Email:</label>
+                        <input type="email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                            title="ex: example@ex.com" placeholder="Enter Valid Email" required>
+
+                        <label>Your License Number:</label>
+                        <input type="text" name="lic" id="text" placeholder=" Enter Your License number" required>
+                    </div>
+                    <div class="form-right">
+                        <label>Phone Number:</label>
+                        <input type="tel" name="ph" maxlength="10" onkeypress="return onlyNumberKey(event)"
+                            placeholder="Enter Your Phone Number" required>
+
+                        <label>Password:</label>
+                        <input type="password" name="pass" maxlength="12" id="psw" placeholder="Enter Password"
+                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                            title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+                            required>
+
+                        <label>Confirm Password:</label>
+                        <input type="password" name="cpass" id="cpsw" placeholder="Renter the password" required>
+
+                        <div class="gender">
+                            <label>Gender:</label>
+                            <div>
+                                <label for="one">Male</label>
+                                <input type="radio" name="gender" value="male">
+                                <label for="two">Female</label>
+                                <input type="radio" name="gender" value="female">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" class="btnn" value="REGISTER" name="regs">
+            </form>
+        </div>
+    </div>
+
     <div id="message">
-  <h3>Password must contain the following:</h3>
-  <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
-  <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
-  <p id="number" class="invalid">A <b>number</b></p>
-  <p id="length" class="invalid">Minimum <b>8 characters</b></p>
-</div>
-<script>
-var myInput = document.getElementById("psw");
-var letter = document.getElementById("letter");
-var capital = document.getElementById("capital");
-var number = document.getElementById("number");
-var length = document.getElementById("length");
+        <h3>Password must contain the following:</h3>
+        <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+        <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+        <p id="number" class="invalid">A <b>number</b></p>
+        <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+    </div>
+    <script>
+    var myInput = document.getElementById("psw");
+    var letter = document.getElementById("letter");
+    var capital = document.getElementById("capital");
+    var number = document.getElementById("number");
+    var length = document.getElementById("length");
 
-// When the user clicks on the password field, show the message box
-myInput.onfocus = function() {
-  document.getElementById("message").style.display = "block";
-}
+    myInput.onfocus = function() {
+        document.getElementById("message").style.display = "block";
+    }
 
-// When the user clicks outside of the password field, hide the message box
-myInput.onblur = function() {
-  document.getElementById("message").style.display = "none";
-}
+    myInput.onblur = function() {
+        document.getElementById("message").style.display = "none";
+    }
 
-// When the user starts to type something inside the password field
-myInput.onkeyup = function() {
-  // Validate lowercase letters
-  var lowerCaseLetters = /[a-z]/g;
-  if(myInput.value.match(lowerCaseLetters)) {
-    letter.classList.remove("invalid");
-    letter.classList.add("valid");
-  } else {
-    letter.classList.remove("valid");
-    letter.classList.add("invalid");
-}
+    myInput.onkeyup = function() {
+        var lowerCaseLetters = /[a-z]/g;
+        if (myInput.value.match(lowerCaseLetters)) {
+            letter.classList.remove("invalid");
+            letter.classList.add("valid");
+        } else {
+            letter.classList.remove("valid");
+            letter.classList.add("invalid");
+        }
 
-  // Validate capital letters
-  var upperCaseLetters = /[A-Z]/g;
-  if(myInput.value.match(upperCaseLetters)) {
-    capital.classList.remove("invalid");
-    capital.classList.add("valid");
-  } else {
-    capital.classList.remove("valid");
-    capital.classList.add("invalid");
-  }
+        var upperCaseLetters = /[A-Z]/g;
+        if (myInput.value.match(upperCaseLetters)) {
+            capital.classList.remove("invalid");
+            capital.classList.add("valid");
+        } else {
+            capital.classList.remove("valid");
+            capital.classList.add("invalid");
+        }
 
-  // Validate numbers
-  var numbers = /[0-9]/g;
-  if(myInput.value.match(numbers)) {
-    number.classList.remove("invalid");
-    number.classList.add("valid");
-  } else {
-    number.classList.remove("valid");
-    number.classList.add("invalid");
-  }
+        var numbers = /[0-9]/g;
+        if (myInput.value.match(numbers)) {
+            number.classList.remove("invalid");
+            number.classList.add("valid");
+        } else {
+            number.classList.remove("valid");
+            number.classList.add("invalid");
+        }
 
-  // Validate length
-  if(myInput.value.length >= 8) {
-    length.classList.remove("invalid");
-    length.classList.add("valid");
-  } else {
-    length.classList.remove("valid");
-    length.classList.add("invalid");
-  }
-}
-</script>  
-<script>
+        if (myInput.value.length >= 8) {
+            length.classList.remove("invalid");
+            length.classList.add("valid");
+        } else {
+            length.classList.remove("valid");
+            length.classList.add("invalid");
+        }
+    }
+
     function onlyNumberKey(evt) {
-          
-        // Only ASCII character in that range allowed
         var ASCIICode = (evt.which) ? evt.which : evt.keyCode
         if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57))
             return false;
         return true;
     }
-</script>
+    </script>
 </body>
+
 </html>

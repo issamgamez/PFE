@@ -4,10 +4,14 @@
     padding: 0;
 
 }
+body, html{
+    overflow: hidden;
+}
 .hai {
     width: 100%;
     height: 109vh;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 50%), url("../images/background.jpg");
+    background-image: url('../images/loging3.jpg');
+    /* background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 50%), url("../images/background.jpg"); */
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -37,36 +41,78 @@
     color: #ff7200;
     font-size: 35px;
     font-family: Arial;
-    padding-left: 20px;
+    padding-left: 60px;
     float:left;
     padding-top: 10px;
 
 }
-.menu{
-    width: 400px;
-    float: left;
-    height: 70px;
-
-}
-
-ul{
-    float: left;
+.navbar {
+    width: 80%;
+    height: 75px;
+    /* margin: auto; */
+    margin-left: 100px;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between; /* Align items to start and end */
     align-items: center;
 }
+
+.menu {
+    display: flex;
+    justify-content: flex-end; /* Align menu items to the right */
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.menu ul li {
+    margin-left: 126px; /* Adjust the margin as needed */
+}
+
+.adminbtn {
+    width: 150px;
+    height: 40px;
+    background: #3DEBB0;
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+.adminbtn a {
+    text-decoration: none;
+    color: black;
+}
+
 
 ul li{
     list-style: none;
     margin-left: 62px;
     margin-top: 27px;
-    font-size: 14px;
+    font-size: 16px;
 
 }
 
 ul li a{
     text-decoration: none;
-    color: white;
+    color: #233C7B;
     font-family: Arial;
     font-weight: bold;
     transition: 0.4s ease-in-out;
@@ -74,7 +120,7 @@ ul li a{
 }
 
 ul li a:hover{
-    color:#EFA828;
+    color:#cc7402;
 
 }
 .search{
@@ -135,7 +181,7 @@ ul li a:hover{
     font-family: Arial;
     letter-spacing: 1.2px;
     line-height: 30px;
-    color: white;
+    color: black;
 
 }
 .content h1{
@@ -144,14 +190,14 @@ ul li a:hover{
     padding-left: 20px;
     margin-top: 9%;
     letter-spacing: 2px;
-    color: white;
+    color: black;
 }
 
 
 .content .cn{
     width: 160px;
     height: 40px;
-    background: #233C7B; 
+    background: rgb(0, 0, 0); 
     border: none;
     margin-bottom: 10px;
     margin-left: 20px;
@@ -164,39 +210,36 @@ ul li a:hover{
 
 .content .cn a{
     text-decoration: none;
-    color: black;
+    color: white;
     transition: 0.3s ease;
 }
 
-.cn:hover{
-    background: white;
-}
+
 
 
 .content span{
-    color:#EFA828;
+    color:#ff7200;
     font-size: 60px;
 }
 
 .form{
     width: 250px;
     height: 400px;
-    background: linear-gradient(to top, rgba(0,0,0,0.8)50%,rgba(0,0,0,0.8)50%);
+    background-color: white;
     position: absolute;
     top:-20px;
     left: 870px;
     border-radius: 10px;
     padding: 20px;
-
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .form h2{
     width:220px;
     font-family: sans-serif;
     text-align: center;
-    color: #EFA828;
+    color: #233C7B;
     font-size: 22px;
-    background-color: white;
     border-radius: 10px;
     margin: 2px;
     padding: 8px;
@@ -206,12 +249,10 @@ ul li a:hover{
 .form input{
     width: 240px;
     height: 35px;
-    background: transparent;
-    border-bottom: 1px solid #ff7200;
     border-top: none;
     border-right: none;
     border-left:none;
-    color:#fff;
+    color:black;
     font-size: 15px;
     letter-spacing: 1px;
     margin-top: 30px;
@@ -222,26 +263,30 @@ ul li a:hover{
 }
 
 ::placeholder{
-    color:#fff;
+    color:rgb(175, 175, 175);
     font-family: Arial;
 }
 
 .btnn{
     width: 240px;
     height: 40px;
-    background: #ff7200;
-    border:#EFA828;
+    background: #233C7B;
+    border-radius: 10px;
     margin-top: 30px;
-    font-size: 18px;
-    
+    font-size: 23px;
+    border: none;
     cursor: pointer;
-    color:#fff;
     transition: 0.4s ease;
 }
 
+.login-btn {
+    color: white; /* Change this to the desired text color */
+    background-color: #ff7200; /* Optional: to ensure the background color matches */
+}
+
 .btnn:hover{
-    /* background: #fff; */
-    color:#ff7200;
+    background:  #233C7B;
+    color:white;
 }
 
 .btnn a{
@@ -255,7 +300,7 @@ ul li a:hover{
     font-size: 17px;
     padding-top: 20px;
     text-align: center;
-    color: #fff;
+    color: black;
 }
 
 .form .link a{
@@ -297,20 +342,6 @@ ul li a:hover{
     width: 120px;
 }
 
-.adminbtn{
-    width: 150px;
-    height: 40px;
-    /* background: #233C7B; */
-    border:none;
-    
-    font-size: 18px;
-    border-radius: 5px;
-    cursor: pointer;
-    color:#fff;
-    transition: 0.4s ease;
+.inp-ut{
 
-}
-.adminbtn a{
-    text-decoration: none;
-    color: black;
 }

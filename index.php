@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>CAR RENTAL</title>
-    <link  rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/home.css">
 </head>
+
 <body>
-<?php
+    <?php
 require_once('components/connection.php');
     if(isset($_POST['login']))
     {
@@ -51,32 +53,34 @@ require_once('components/connection.php');
                     <li><a href="#">HOME</a></li>
                     <li><a href="components/aboutus.html">ABOUT</a></li>
                     <li><a href="components/services.php">SERVICES</a></li>
-                    
+
                     <li><a href="components/contactus.html">CONTACT</a></li>
-                  <li> <button class="adminbtn"><a href="components/adminlogin.php">ADMIN LOGIN</a></button></li>
+                    <li> <button class="adminbtn"><a href="components/adminlogin.php">ADMIN LOGIN</a></button></li>
                 </ul>
             </div>
-            
-          
+
+
         </div>
         <div class="content">
             <h1>Car Rental <br><span>WORLDWIDE</span></h1>
             <p class="par">Live the life of Luxury.<br>
                 Just rent a car of your wish from our vast collection.<br>Enjoy every moment with your family<br>
-                 Join us to make this family vast.  </p>
+                Join us to make this family vast. </p>
             <button class="cn"><a href="components/register.php">JOIN US</a></button>
             <div class="form">
                 <h2>Login Here</h2>
-                <form method="POST"> 
-                <input type="email" name="email" placeholder="Enter Email Here">
-                <input type="password" name="pass" placeholder="Enter Password Here">
-                <input class="btnn" type="submit" value="Login" name="login"></input>
+                <form method="POST">
+                    <input class="inp-ut" type="email" name="email" placeholder="Enter Email Here">
+                    <input class="inp-ut" type="password" name="pass" placeholder="Enter Password Here">
+                    <input class="btnn login-btn" type="submit" value="Login" name="login">
                 </form>
                 <p class="link">Don't have an account?<br>
-                <a href="components/register.php">Sign up</a> here</a></p>
+                    <a href="components/register.php">Sign up</a> here</a>
+                </p>
             </div>
         </div>
     </div>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 </body>
+
 </html>

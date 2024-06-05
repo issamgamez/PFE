@@ -1,19 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/adminlogin.css">
+    <link rel="stylesheet" href="../css/login.css">
 
     <title>ADMIN LOGIN</title>
-   
+    <style>
+    body,
+    html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container-hhh {
+        display: flex;
+        justify-content: space-between;
+        width: 70vw;
+        height: 70vh;
+        /* For visual reference */
+    }
+
+    .container-hhh>div {
+        width: 45%;
+        /* Adjust width as needed */
+        height: 100%;
+        /* Adjust height as needed */
+        /* For visual reference */
+    }
+    </style>
+
 </head>
+
 <body>
 
 
 
-<?php
+    <?php
     require_once('connection.php');
     if(isset($_POST['adlog'])){
         $id=$_POST['adid'];
@@ -32,8 +61,8 @@
                 $db_password = $row['ADMIN_PASSWORD'];
                 if($pass  == $db_password)
                 {
-                    // echo '<script>alert("Welcome ADMINISTRATOR!");</script>';
-                    header("location: adminvehicle.php");
+                    echo '<script>alert("Welcome ADMINISTRATOR!");</script>';
+                    header("location: admindash.php");
                     
                 }
                 else{
@@ -49,19 +78,38 @@
 
 ?>
 
-<button class="back"><a href="../index.php">Go To Home</a></button>
-    <div class="helloadmin">
-    <h1>HELLO ADMIN!</h1></div>
 
-    
-    <form class="form" method="POST">
-        <h2>Admin Login</h2>
-        <input class="h" type="text" name="adid" placeholder="Enter admin user id">
-        <input class="h" type="password" name="adpass" placeholder="Enter admin password">
-        <input type="submit" class="btnn" value="LOGIN" name="adlog" >
-    </form>
-    
-    
+    <div class="container-hhh">
+        <div class="btn-home">
+            <button class="back"><a href="../index.php"><img src="../images/icon-home.png" width="30vw"
+                        alt=""></a></button>
+        </div>
+        <div class="container-logo">
+
+            <div class="icon-login">
+                <img src="../images/icon_login.png" width="400vw" alt="">
+            </div>
+        </div>
+        <div class="container-form">
+            <div class="ooo">
+                <h1>HELLO ADMIN!</h1>
+                <div class="hhhhhh">
+                    <div class="hhhh-hh">
+                        <form class="form" method="POST">
+                            <h2 class="hhh-title">Login as a Admin User</h2>
+                            <input class="h" type="text" name="adid" placeholder="Enter admin user id">
+                            <input class="h" type="password" name="adpass" placeholder="Enter admin password">
+                            <input type="submit" class="btnn" value="LOGIN" name="adlog">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
 
 </body>
+
 </html>
