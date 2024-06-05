@@ -13,6 +13,18 @@
         padding-top: 40px;
     }
 
+    .register {
+        background-color: white;
+        width: 100%;
+        font-size: 18px;
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+        color: black;
+        margin-left: -45px;
+        padding: 40px;
+    }
+
     .header-container h1 {
         margin-right: 20px;
     }
