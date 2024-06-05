@@ -6,7 +6,7 @@
             body {
                 text-align: center;
                 /* padding: 40px 0; */
-                background-image: url("images/ps.png");
+                background-image: url("../images/paym.jpg");
                 background-repeat: no-repeat;
                 background-position: center;
                 background-size: cover;

@@ -6,10 +6,10 @@
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css"
-      href="main.js" 
+      href="./main.js" 
     />
     <script src="main.js"></script>
-    <link rel="stylesheet" href="css/pay.css" />
+    <link rel="stylesheet" href="../css/pay.css" />
     <title>Payment Form</title>
     <script type="text/javascript">
         function preventBack() {
@@ -37,7 +37,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background:orange url("images/paym.jpg") center/cover;
+  background:orange url("../images/paym.jpg") center/cover;
   overflow: hidden;
 }
 
@@ -247,7 +247,7 @@ if(isset($_POST['pay'])){
             />
           </div>
           <div class="card__col card__chip">
-            <img src="images/chip.svg" alt="chip" />
+            <img src="../images/chip.svg" alt="chip" />
           </div>
         </div>
         <div class="card__row">
