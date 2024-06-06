@@ -3,128 +3,64 @@
 
 <head>
     <title>REGISTRATION</title>
-    <link rel="stylesheet" href="../css/register1.css">
+    <link rel="stylesheet" href="../css/register.css">
 
-    <style>
-    .header-container {
-        display: flex;
-        width: 100%;
-        justify-content: center;
-        padding-top: 40px;
-    }
-
-    .register {
-        background-color: white;
-        width: 100%;
-        font-size: 18px;
-        border-radius: 10px;
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
-        color: black;
-        margin-left: -45px;
-        padding: 40px;
-    }
-
-    .header-container h1 {
-        margin-right: 20px;
-    }
-
-    .header-container button {
-        background: none;
-        border: none;
-        padding: 0;
-    }
-
-    .header-container button a img {
-        width: 30px;
-    }
-
-    .form-container {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .form-left,
-    .form-right {
-        width: 48%;
-    }
-
-    .form-left {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .form-right {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .gender {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .gender label {
-        margin-right: 10px;
-    }
-    </style>
 </head>
 
 <body>
 
     <?php
 
-require_once('connection.php');
-if(isset($_POST['regs']))
-{
-    $fname=mysqli_real_escape_string($con,$_POST['fname']);
-    $lname=mysqli_real_escape_string($con,$_POST['lname']);
-    $email=mysqli_real_escape_string($con,$_POST['email']);
-    $lic=mysqli_real_escape_string($con,$_POST['lic']);
-    $ph=mysqli_real_escape_string($con,$_POST['ph']);
-   
-    $pass=mysqli_real_escape_string($con,$_POST['pass']);
-    $cpass=mysqli_real_escape_string($con,$_POST['cpass']);
-    $gender=mysqli_real_escape_string($con,$_POST['gender']);
-    $Pass=md5($pass);
-    if(empty($fname)|| empty($lname)|| empty($email)|| empty($lic)|| empty($ph)|| empty($pass) || empty($gender))
+    require_once('connection.php');
+    if(isset($_POST['regs']))
     {
-        echo '<script>alert("please fill the place")</script>';
+        $fname=mysqli_real_escape_string($con,$_POST['fname']);
+        $lname=mysqli_real_escape_string($con,$_POST['lname']);
+        $email=mysqli_real_escape_string($con,$_POST['email']);
+        $lic=mysqli_real_escape_string($con,$_POST['lic']);
+        $ph=mysqli_real_escape_string($con,$_POST['ph']);
+
+        $pass=mysqli_real_escape_string($con,$_POST['pass']);
+        $cpass=mysqli_real_escape_string($con,$_POST['cpass']);
+        $gender=mysqli_real_escape_string($con,$_POST['gender']);
+        $Pass=md5($pass);
+        if(empty($fname)|| empty($lname)|| empty($email)|| empty($lic)|| empty($ph)|| empty($pass) || empty($gender))
+        {
+            echo '<script>alert("please fill the place")</script>';
+        }
+        else{
+            if($pass==$cpass){
+            $sql2="SELECT *from users where EMAIL='$email'";
+            $res=mysqli_query($con,$sql2);
+            if(mysqli_num_rows($res)>0){
+                echo '<script>alert("EMAIL ALREADY EXISTS PRESS OK FOR LOGIN!!")</script>';
+                echo '<script> window.location.href = "index.php";</script>';
+
+            }
+            else{
+            $sql="insert into users (FNAME,LNAME,EMAIL,LIC_NUM,PHONE_NUMBER,PASSWORD,GENDER) values('$fname','$lname','$email','$lic',$ph,'$Pass','$gender')";
+            $result = mysqli_query($con,$sql);
+
+            if($result){
+                echo '<script>alert("Registration Successful Press ok to login")</script>';
+                echo '<script> window.location.href = "../index.php";</script>';       
+            }
+            else{
+                echo '<script>alert("please check the connection")</script>';
+            }
+
+            }
+
+            }
+            else{
+                echo '<script>alert("PASSWORD DID NOT MATCH")</script>';
+                echo '<script> window.location.href = "register.php";</script>';
+            }
+        }
     }
-    else{
-        if($pass==$cpass){
-        $sql2="SELECT *from users where EMAIL='$email'";
-        $res=mysqli_query($con,$sql2);
-        if(mysqli_num_rows($res)>0){
-            echo '<script>alert("EMAIL ALREADY EXISTS PRESS OK FOR LOGIN!!")</script>';
-            echo '<script> window.location.href = "index.php";</script>';
-
-        }
-        else{
-        $sql="insert into users (FNAME,LNAME,EMAIL,LIC_NUM,PHONE_NUMBER,PASSWORD,GENDER) values('$fname','$lname','$email','$lic',$ph,'$Pass','$gender')";
-        $result = mysqli_query($con,$sql);
-          
-        if($result){
-            echo '<script>alert("Registration Successful Press ok to login")</script>';
-            echo '<script> window.location.href = "../index.php";</script>';       
-           }
-        else{
-            echo '<script>alert("please check the connection")</script>';
-        }
-    
-        }
-
-        }
-        else{
-            echo '<script>alert("PASSWORD DID NOT MATCH")</script>';
-            echo '<script> window.location.href = "register.php";</script>';
-        }
-    }
-}
 
 
-?>
+    ?>
 
     <div class="btn-btn-home">
         <h3 class="btn-ic-ti">Home</h3>
@@ -169,7 +105,7 @@ if(isset($_POST['regs']))
 
                         <div class="gender">
                             <label>Gender:</label>
-                            <div>
+                            <div class="gen-f-m">
                                 <label for="one">Male</label>
                                 <input type="radio" name="gender" value="male">
                                 <label for="two">Female</label>
@@ -184,7 +120,7 @@ if(isset($_POST['regs']))
     </div>
 
     <div id="message">
-        <h3>Password must contain the following:</h3>
+        <h5>Password must contain the following:</h5>
         <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
         <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
         <p id="number" class="invalid">A <b>number</b></p>

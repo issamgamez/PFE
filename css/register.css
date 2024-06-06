@@ -1,4 +1,71 @@
-/* Existing CSS */
+.header-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+.register {
+    background-color: white;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+    color: black;
+    margin-left: -45px;
+    padding: 40px;
+}
+
+.header-container h1 {
+    margin-right: 20px;
+}
+
+.header-container button {
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.header-container button a img {
+    width: 30px;
+}
+
+.form-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-left,
+.form-right {
+    width: 48%;
+}
+
+.form-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.gender {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 12%;
+}
+
+.gender label {
+    margin-right: 10px;
+}
+
+.gen-f-m{
+    margin: 5%;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -43,7 +110,7 @@ body {
     border: none;
 }
 
-.btn-ic-ti{
+.btn-ic-ti {
     text-align: center;
     margin-bottom: 0px;
 }
@@ -77,7 +144,8 @@ form#register {
     margin: 40px;
 }
 
-.form-left, .form-right {
+.form-left,
+.form-right {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -104,16 +172,15 @@ form#register {
     font-size: 16px;
 }
 
-/* Add these styles for consistency */
 .form-container {
     display: flex;
     justify-content: space-between;
 }
 
-.form-left, .form-right {
+.form-left,
+.form-right {
     width: 48%;
 }
-
 
 label {
     font-family: sans-serif;
@@ -121,7 +188,12 @@ label {
     font-style: italic;
 }
 
-input#fname, input#lname, input#email, input#text, input[type="text"], input[type="email"] {
+input#fname,
+input#lname,
+input#email,
+input#text,
+input[type="text"],
+input[type="email"] {
     width: calc(100% - 24px);
     padding: 12px;
     border: 1px solid #ccc;
@@ -131,7 +203,12 @@ input#fname, input#lname, input#email, input#text, input[type="text"], input[typ
     margin-bottom: 16px;
 }
 
-input#name, input#psw, input#cpsw, input[type="email"], input[type="tel"], input[type="password"] {
+input#name,
+input#psw,
+input#cpsw,
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
     width: calc(100% - 24px);
     padding: 12px;
     border: 1px solid #ccc;
@@ -151,18 +228,28 @@ input#name, input#psw, input#cpsw, input[type="email"], input[type="tel"], input
 
 #message {
     display: none;
-    background: #f1f1f1;
+    background: white;
     color: #000;
-    position: relative;
+    position: fixed;
     padding: 20px;
-    width: 300px;
+    width: 200px;
     margin-top: 10px;
+    top: 67%;
+    left: 79%;
+    border-radius: 20px;
+    transform: translateY(-50%);
 }
 
 #message p {
-    padding: 10px 35px;
-    font-size: 18px;
+    padding: 0px 10px;
+    font-size: 14px;
 }
+
+#message h5{
+    text-align: center;
+}
+
+
 
 .valid {
     color: green;
@@ -170,7 +257,7 @@ input#name, input#psw, input#cpsw, input[type="email"], input[type="tel"], input
 
 .valid:before {
     position: relative;
-    left: -35px;
+    left: -10px;
     content: "✔";
 }
 
@@ -180,31 +267,6 @@ input#name, input#psw, input#cpsw, input[type="email"], input[type="tel"], input
 
 .invalid:before {
     position: relative;
-    left: -35px;
+    left: -10px;
     content: "✖";
-}
-
-/* New CSS */
-.form-container {
-    display: flex;
-    justify-content: space-between;
-}
-
-.form-left, .form-right {
-    width: 48%;
-}
-
-.form-left, .form-right {
-    display: flex;
-    flex-direction: column;
-}
-
-.gender {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.gender label {
-    margin-right: 10px;
 }
