@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Services - Car Rental</title>
-    <link rel="stylesheet" href="../css/services.css">
+    <link rel="stylesheet" href="../css/services1.css">
 </head>
+
 <body>
     <div class="hai">
         <div class="content">
             <h1>Our <span>Services</span></h1>
             <p class="par">Explore the range of services we offer to make your journey unforgettable.</p>
             <div class="services-section">
-            <?php
+                <?php
             // Include the database connection script
             require_once 'connection.php';
 
@@ -35,4 +37,5 @@
         </div>
     </div>
 </body>
+
 </html>
