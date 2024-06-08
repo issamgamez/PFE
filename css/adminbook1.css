@@ -40,7 +40,7 @@
     color: #ff7200;
     font-size: 35px;
     font-family: Arial;
-    /* padding-left: 20px; */
+    padding-left: 20px;
 }
 
 .menu {
@@ -53,10 +53,9 @@ ul {
     display: flex;
     justify-content: space-between; /* Ensures even spacing */
     align-items: center;
-    width: 99%;
+    width: 82%;
     list-style: none;
-    padding: 0;
-    margin: 0;
+    padding-top: 1.5%;
 }
 
 ul li {
@@ -185,4 +184,10 @@ ul li button.nn {
 .but a {
     text-decoration: none;
     color: black;
+}
+
+.but{
+    background-color: rgba(226, 225, 225, 0.534);
+    height: 4vh;
+    width: 5.5vw;
 }

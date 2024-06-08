@@ -44,22 +44,22 @@
 }
 
 .menu {
-    width: calc(100% - 200px); /* Adjust width dynamically */
+    flex: 1;
     display: flex;
     align-items: center;
 }
 
 ul {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around; /* Ensures even spacing */
     align-items: center;
     width: 82%;
-    padding-top: 1.5%;
     list-style: none;
+    padding-top: 1.5%;
 }
 
 ul li {
-    margin: 0 20px; /* Adjusts spacing between items */
+    margin: 0 20px; /* Adjust spacing between items */
 }
 
 ul li a {
@@ -117,28 +117,32 @@ ul li button.nn {
 }
 
 .content-table thead {
-    text-align: center;
+    background-color: rgb(226, 226, 226);
 }
 
 .content-table tr:nth-child(even) {
-    background-color: white;
+    background-color: transparent;
 }
 
 .content-table tr:nth-child(odd) {
-    background-color: white;
-    border-radius: 50px;
+    background-color: transparent;
+    border-bottom: 3px solid black;
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-left: 3px solid black;
 }
 
 .content-table tbody tr {
-    border-bottom: 1px solid #dddddd;
+    border-bottom: 1px solid transparent;
+    border-bottom: 3px solid white;
+    border-top: 3px solid white;
+    border-right: 3px solid white;
+    border-left: 3px solid white;
 }
 
 .content-table tbody tr:nth-of-type(even) {
-    background-color: #f3f3f3;
-}
-
-.text-table {
-    color: black;
+    background-color: transparent;
+    
 }
 
 .content-table thead {
@@ -146,8 +150,51 @@ ul li button.nn {
     color: orange;
 }
 
+.tableee{
+    color: black;
+    border-bottom: 3px solid white;
+    border-top: 3px solid white;
+    border-right: 3px solid white;
+    border-left: 3px solid white;
+}
+
+.tbntt{
+    border-bottom: 3px solid white;
+    border-top: 3px solid white;
+    border-right: 3px solid white;
+    border-left: 3px solid white;
+    font-size: 17px;
+}
+
 .header {
-    margin-top: 70px;
+    margin-top: 5%;
     margin-left: 650px;
-    color: #233C7B;
+    color:  #233C7B;
+}
+
+.nn {
+    width: 100px;
+    border: none;
+    height: 40px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    transition: 0.4s ease;
+}
+
+.but a {
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+    font-size: 11px;
+}
+
+.but a:hover {
+    color: rgb(161, 42, 42);
+}
+
+.but {
+    border: none;
+    background-color: transparent;
 }
