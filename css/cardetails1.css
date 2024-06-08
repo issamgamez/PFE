@@ -4,7 +4,7 @@
 }
 
 body {
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 50%), url("../images/background.jpg");
+    background: url('../images//loging3.jpg');
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -57,7 +57,7 @@ ul li {
 
 ul li a {
     text-decoration: none;
-    color: white;
+    color: black;
     font-family: Arial;
     font-weight: bold;
     transition: 0.4s ease-in-out;
@@ -78,20 +78,59 @@ ul li a:hover {
     flex-direction: row; 
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    height: auto;
+    width: 37vw;
+    height: 40vh;
     margin: 20px;
 }
 
+.btn-book {
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    transform: translate(70%, -150%);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.box {
+    position: relative; /* لتتمكن من استخدام position: absolute داخلها */
+}
+
+/* إضافات لتحسين المظهر */
+.btn-book a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.utton {
+    width: 240px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.4s ease;
+}
+
+
+
 .box .imgBx {
-    width: 150px;
+    width: 100vw;
     flex: 0 0 150px;
     order: 2; /* Move image to the right */
 }
 
 .box .imgBx img {
-    max-width: 100%;
+    
     border-radius: 4px;
+}
+
+.box-im{
+    max-width: 17vw;margin-top: -20%;
 }
 
 .box .content {
@@ -99,6 +138,18 @@ ul li a:hover {
     text-align: left;
     flex: 1;
     order: 1; /* Ensure content is on the left */
+}
+
+.content h1 {
+    font-family: Arial;
+}
+
+.car-tt{
+    
+}
+
+.content h2 {
+    font-family: Arial;
 }
 
 .box .button {
@@ -117,21 +168,26 @@ ul li a:hover {
 .utton {
     width: 240px;
     height: 40px;
-    background: #233C7B;
+    background: #007bff;
     border: none;
     font-size: 18px;
     border-radius: 10px;
     cursor: pointer;
     color: #fff;
-    transition: 0.4s ease;
+    transition: 0.1s ease;
 }
 
 .de {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    /* gap: 20px; */
     list-style-type: none;
     padding: 0;
+}
+
+.bbbox-coon{
+    display: flex;
+    justify-content: center;
 }
 
 .de li a:hover {
@@ -161,7 +217,7 @@ ul li a:hover {
 
 .overview {
     text-align: center;
-    color: white;
+    color: black;
     margin-top: 40px;
 }
 

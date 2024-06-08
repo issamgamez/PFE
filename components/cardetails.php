@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/cardetails2.css">
+    <link rel="stylesheet" href="../css/cardetails1.css">
     <title>Car Details</title>
 
 </head>
@@ -83,10 +83,13 @@
                                             <h2>Fuel Type : <a><?php echo $result['FUEL_TYPE']?></a> </h2>
                                             <h2>CAPACITY : <a><?php echo $result['CAPACITY']?></a> </h2>
                                             <h2>Rent Per Day : <a><?php echo $result['PRICE']?> DH </a></h2>
-                                            <button type="submit" name="booknow" class="utton"
-                                                style="margin-top: 5px;"><a
-                                                    href="booking.php?id=<?php echo $res;?>">book</a></button>
                                         </div>
+
+                                    </div>
+                                    <div class="btn-book">
+                                        <button type="submit" name="booknow" class="utton" style="margin-top: 5px;"><a
+                                                href="booking.php?id=<?php echo $res;?>">book</a>
+                                        </button>
                                     </div>
                                 </div>
                             </form>
