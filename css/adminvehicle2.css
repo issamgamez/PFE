@@ -121,15 +121,24 @@ ul li button.nn {
 }
 
 .content-table thead {
-    background-color: #ff7200;
+    background-color: #ff7300c0;
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.4);
 }
 
 .content-table tr:nth-child(even) {
-    background-color: #ddd;
+    background-color: transparent;
+    border-bottom: 3px solid white;
+    border-top: 3px solid white;
+    border-right: 3px solid white;
+    border-left: 3px solid white;
 }
 
 .content-table tr:nth-child(odd) {
-    background-color: #233C7B;
+    background-color: transparent;
+    border-bottom: 3px solid white;
+    border-top: 3px solid white;
+    border-right: 3px solid white;
+    border-left: 3px solid white;
 }
 
 .content-table thead .active-row {
@@ -174,14 +183,14 @@ ul li button.nn {
 .add {
     width: 200px;
     height: 40px;
-    background: #8B57F7;
+    background: #1c43a6d3;
     border: none;
     font-size: 18px;
     border-radius: 10px;
     cursor: pointer;
     color: #fff;
     transition: 0.4s ease;
-    margin-left: 70%;
+    margin-left: 80%;
     margin-top: 3%;
 }
 
@@ -209,3 +218,21 @@ ul li button.nn {
     border: none;
     background-color: transparent;
 }
+
+.content-table th{
+    color: black;
+    border-bottom: 3px solid white;
+    border-top: 3px solid white;
+    border-right: 3px solid white;
+    border-left: 3px solid white;
+}
+
+.content-table td{
+    color: black;
+    border-bottom: 3px solid white;
+    border-top: 3px solid white;
+    border-right: 3px solid white;
+    border-left: 3px solid white;
+}
+
+

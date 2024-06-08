@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-position: center;
+  background-image: url("../images/loging3.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+.main {
+  width: 400px;
+  margin: 100px auto 0px auto;
+  margin-top: 4%;
+}
+.btnn {
+  width: 240px;
+  height: 40px;
+  background: #233c7b;
+  border: none;
+  margin-top: 30px;
+  margin-left: 40px;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #fff;
+  transition: 0.4s ease;
+}
+
+.btnn:hover {
+  background: #fff;
+  color: #ff7200;
+}
+
+.btnn a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+h2 {
+  text-align: center;
+  padding: 20px;
+  font-family: sans-serif;
+  color: black;
+}
+.register {
+  background-color: white;
+  width: 100%;
+  font-size: 18px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  margin: auto;
+}
+
+form#register {
+  margin: 40px;
+  margin-top: 10px;
+}
+
+label {
+  font-family: sans-serif;
+  font-size: 18px;
+  color: black;
+}
+
+input#name {
+  width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  outline: 0;
+  padding: 7px;
+  background-color: #fff;
+  box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.im-la {
+  color: black;
+  padding-top: 5%;
+}
+
+#back {
+  width: 100px;
+  height: 40px;
+  background: #233c7b;
+  border: none;
+  margin-top: 10px;
+  margin-left: 20px;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+#back a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+#fam {
+  color: #ff7200;
+  font-family: "Times New Roman";
+  font-size: 50px;
+  padding-left: 20px;
+  margin-top: -10px;
+  text-align: center;
+  letter-spacing: 2px;
+  display: inline;
+  margin-left: 250px;
+}
+
+.reg {
+  width: 100%;
+}
+
+.back {
+    border: none;
+}
+.back img {
+  align-items: center;
+  width: 3.5vw;
+}
+
+.back a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.back a:hover {
+  text-decoration: underline;
+}
+
+.btn-home {
+  position: absolute;
+  display: block;
+  top: 7%;
+  left: 10%;
+}
+
+.title-lo-icon{
+    font-size: 20px;
+    text-align: center;
+}
