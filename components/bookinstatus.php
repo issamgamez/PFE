@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,9 +9,10 @@
 
     <title>BOOKING STATUS</title>
 </head>
+
 <body>
 
-<?php
+    <?php
     require_once('connection.php');
     session_start();
     $email = $_SESSION['email'];
@@ -36,25 +38,28 @@
 
 
 ?>
-   <ul><li> <button  class="utton"><a href="../components/cardetails.php">Go to Home</a></button></li><li class="name">HELLO! <?php echo $rows2['LNAME']." ".$rows2['FNAME']?></li>
+    <ul>
+        <li> <button class="utton"><a href="../components/cardetails.php">Go to Home</a></button></li>
+        <li class="name">HELLO! <?php echo $rows2['LNAME']." ".$rows2['FNAME']?></li>
 
 
 
 
-</ul>
+    </ul>
     <div class="box">
-         <div class="content">
-             <h1>CAR NAME : <?php echo $rows3['CAR_NAME']?></h1><br>
-             <h1>NO OF DAYS : <?php echo $rows['DURATION']?></h1><br>
-             <h1>BOOKING STATUS : <?php echo $rows['BOOK_STATUS']?></h1><br>
-             
-         </div>
-     </div>
+        <div class="content">
+            <h1>CAR NAME : <?php echo $rows3['CAR_NAME']?></h1><br>
+            <h1>NO OF DAYS : <?php echo $rows['DURATION']?></h1><br>
+            <h1>BOOKING STATUS : <?php echo $rows['BOOK_STATUS']?></h1><br>
+
+        </div>
+    </div>
 
 
 
-<?php }
+    <?php }
 ?>
-    
+
 </body>
+
 </html>

@@ -45,6 +45,39 @@
         color: #fff;
         transition: 0.4s ease;
     }
+
+    .language {
+        font-size: 16px;
+        font-family: Arial;
+        font-weight: lighter;
+    }
+
+    .language a {
+        font-size: 17px;
+        font-family: Arial;
+        font-weight: bold;
+    }
+
+    .btn-div {
+        padding-top: 30%;
+        padding-left: 55%;
+    }
+
+
+    .box-im {
+        width: 17vw;
+        height: 25vh;
+        padding-bottom: 20%;
+    }
+
+    .car-tt {
+        font-size: 22px;
+    }
+
+
+    .lang-pad {
+        padding-top: 10%;
+    }
     </style>
 </head>
 
@@ -76,8 +109,11 @@
                         <li><a href="Feedbacks.php">FEEDBACK</a></li>
                         <li><button class="nn"><a href="../index.php">LOGOUT</a></button></li>
                         <li>
-                            <p class="phello">HELLO! &nbsp;<a
-                                    id="pname"><?php echo $rows['FNAME']." ".$rows['LNAME']?></a></p>
+                            <p class="phello">HELLO! &nbsp;
+                                <a id="pname">
+                                    <?php echo $rows['FNAME']." ".$rows['LNAME']?>
+                                </a>
+                            </p>
                         </li>
                         <li><a id="stat" href="bookinstatus.php">BOOKING STATUS</a></li>
                     </ul>
@@ -101,9 +137,14 @@
                                         <ddiv class="content">
                                             <?php $res = $result['CAR_ID']; ?>
                                             <h1 class="car-tt"><?php echo $result['CAR_NAME']?></h1>
-                                            <h2>Fuel Type : <a><?php echo $result['FUEL_TYPE']?></a> </h2>
-                                            <h2>CAPACITY : <a><?php echo $result['CAPACITY']?></a> </h2>
-                                            <h2>Rent Per Day : <a><?php echo $result['PRICE']?> DH </a></h2>
+                                            <h2 class="language lang-pad">Fuel Type :
+                                                <a><?php echo $result['FUEL_TYPE']?></a>
+                                            </h2>
+                                            <h2 class="language">Capacity :
+                                                <a><?php echo $result['CAPACITY']?></a>
+                                            </h2>
+                                            <h2 class="language">Rent Per Day : <a><?php echo $result['PRICE']?>
+                                                    DH </a></h2>
                                             <div class="btn-div">
                                                 <button type="submit" name="booknow" class="utton"
                                                     style="margin-top: 5px;">
