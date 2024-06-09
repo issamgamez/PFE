@@ -14,7 +14,6 @@ require_once('components/connection.php');
         $email=$_POST['email'];
         $pass=$_POST['pass'];
         
-        
         if(empty($email) || empty($pass))
         {
             echo '<script>alert("please fill the blanks")</script>';
