@@ -7,6 +7,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/cardetails2.css">
     <title>Car Details</title>
+
+    <style>
+    input[type=text] {
+        width: 120px;
+        box-sizing: border-box;
+        border: 2px solid black;
+        border-radius: 4px;
+        font-size: 16px;
+        background-color: white;
+        background-image: url('searchicon.png');
+        background-position: 10px 10px;
+        background-repeat: no-repeat;
+        padding: 12px 20px 12px 20px;
+        transition: width 0.4s ease-in-out;
+    }
+
+    input[type=text]:focus {
+        width: 15%;
+    }
+
+    .inp-search {
+        display: flex;
+        justify-content: end;
+        padding-top: 2%;
+        padding-right: 7.3%;
+    }
+
+    .utton {
+        width: 240px;
+        height: 40px;
+        background: #233c7b63;
+        border: none;
+        font-size: 18px;
+        border-radius: 10px;
+        cursor: pointer;
+        color: #fff;
+        transition: 0.4s ease;
+    }
+    </style>
 </head>
 
 <body class="body">
@@ -37,7 +76,8 @@
                         <li><a href="Feedbacks.php">FEEDBACK</a></li>
                         <li><button class="nn"><a href="../index.php">LOGOUT</a></button></li>
                         <li>
-                            <p class="phello">HELLO! &nbsp;<a id="pname"><?php echo $rows['FNAME']." ".$rows['LNAME']?></a></p>
+                            <p class="phello">HELLO! &nbsp;<a
+                                    id="pname"><?php echo $rows['FNAME']." ".$rows['LNAME']?></a></p>
                         </li>
                         <li><a id="stat" href="bookinstatus.php">BOOKING STATUS</a></li>
                     </ul>
@@ -45,7 +85,9 @@
             </div>
             <div>
                 <h1 class="overview">OUR CARS OVERVIEW</h1>
-                <input type="text" id="searchCar" placeholder="search car" onkeyup="filterCars()">
+                <div class="inp-search">
+                    <input type="text" id="searchCar" placeholder="search car" onkeyup="filterCars()">
+                </div>
                 <div class="bbbox-coon">
                     <ul class="de" id="carList">
                         <?php while ($result = mysqli_fetch_array($cars)) { ?>
@@ -56,16 +98,19 @@
                                         <div class="imgBx">
                                             <img class="box-im" src="../images/<?php echo $result['CAR_IMG']?>">
                                         </div>
-                                        <div class="content">
+                                        <ddiv class="content">
                                             <?php $res = $result['CAR_ID']; ?>
                                             <h1 class="car-tt"><?php echo $result['CAR_NAME']?></h1>
                                             <h2>Fuel Type : <a><?php echo $result['FUEL_TYPE']?></a> </h2>
                                             <h2>CAPACITY : <a><?php echo $result['CAPACITY']?></a> </h2>
                                             <h2>Rent Per Day : <a><?php echo $result['PRICE']?> DH </a></h2>
-                                            <button type="submit" name="booknow" class="utton" style="margin-top: 5px;">
-                                                <a href="booking.php?id=<?php echo $res;?>">book</a>
-                                            </button>
-                                        </div>
+                                            <div class="btn-div">
+                                                <button type="submit" name="booknow" class="utton"
+                                                    style="margin-top: 5px;">
+                                                    <a href="booking.php?id=<?php echo $res;?>">book</a>
+                                                </button>
+                                            </div>
+                                        </ddiv>
                                     </div>
                                 </div>
                             </form>
@@ -78,19 +123,19 @@
     </div>
 
     <script>
-        function filterCars() {
-            const searchInput = document.getElementById('searchCar').value.toLowerCase();
-            const carItems = document.querySelectorAll('.car-item');
+    function filterCars() {
+        const searchInput = document.getElementById('searchCar').value.toLowerCase();
+        const carItems = document.querySelectorAll('.car-item');
 
-            carItems.forEach(item => {
-                const carName = item.querySelector('.car-tt').textContent.toLowerCase();
-                if (carName.includes(searchInput)) {
-                    item.style.display = '';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-        }
+        carItems.forEach(item => {
+            const carName = item.querySelector('.car-tt').textContent.toLowerCase();
+            if (carName.includes(searchInput)) {
+                item.style.display = '';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    }
     </script>
 </body>
 
