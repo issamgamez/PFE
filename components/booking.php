@@ -9,7 +9,13 @@
     <link rel="stylesheet" href="../css/bookin1.css">
     <style>
     input {
-        color: #ffff;
+        color: black;
+    }
+
+    .lo-lo {
+        width: 3.5vw;
+        padding-top: 9%;
+        padding-left: 50%;
     }
     </style>
 </head>
@@ -76,7 +82,7 @@
     <div class="hai">
         <div class="navbar">
             <div class="icon">
-                <h2 class="logo">C R W</h2>
+                <img class="lo-lo" src="../images/logo.png">
             </div>
             <div class="menu">
                 <ul>
