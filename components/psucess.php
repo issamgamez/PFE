@@ -87,6 +87,7 @@
         <h1>Success</h1>
         <p>We received your rental request;<br /> we'll be in touch shortly!</p>
         <button id="back"><a href="cardetails.php">Search Cars</a></button>
+
     </div>
 </body>
 
