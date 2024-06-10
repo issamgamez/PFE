@@ -29,8 +29,8 @@ div.main{
 }
 
 .btnn:hover{
-    background: #fff;
-    color:#233C7B;
+    background: #007bff;
+    color:white;
 }
 
 .btnn a{

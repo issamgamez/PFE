@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/bookinstatus.css">
+    <link rel="stylesheet" href="../css/bookinstatus1.css">
 
     <title>BOOKING STATUS</title>
 </head>
@@ -38,20 +38,38 @@
 
 
 ?>
-    <ul>
-        <li> <button class="utton"><a href="../components/cardetails.php">Go to Home</a></button></li>
-        <li class="name">HELLO! <?php echo $rows2['LNAME']." ".$rows2['FNAME']?></li>
-
-
-
-
-    </ul>
+    <div class="div-conta">
+        <ul class="li-conta">
+            <li>
+                <div class="btn-us-home">
+                    <h3 class="title-icon">Home</h3> <!-- Add Title Home here -->
+                    <button class="back-btn-bb">
+                        <a href="../components/cardetails.php">
+                            <img src="../images/icon-home.png.png" width="50vw" alt="">
+                        </a>
+                    </button>
+                </div>
+            </li>
+            <li class="name">HELLO! <?php echo $rows2['LNAME']." ".$rows2['FNAME']?></li>
+        </ul>
+    </div>
     <div class="box">
         <div class="content">
-            <h1>CAR NAME : <?php echo $rows3['CAR_NAME']?></h1><br>
-            <h1>NO OF DAYS : <?php echo $rows['DURATION']?></h1><br>
-            <h1>BOOKING STATUS : <?php echo $rows['BOOK_STATUS']?></h1><br>
-
+            <div class="item">
+                <img src="../images/luxurycars.png" width="47vw">
+                <label class="chara">CAR NAME:</label>
+                <label class="nm-la"><?php echo $rows3['CAR_NAME']?></label>
+            </div>
+            <div class="item">
+                <img src=" ../images/calander.png" width="47vw">
+                <label class="chara">NM OF DAYS:</label>
+                <label class="nm-la"><?php echo $rows['DURATION']?></label>
+            </div>
+            <div class="item">
+                <img src="../images/status.png" width="47vw">
+                <label class="chara">BOOKING STATUS:</label>
+                <label class="nm-la"><?php echo $rows['BOOK_STATUS']?></label>
+            </div>
         </div>
     </div>
 

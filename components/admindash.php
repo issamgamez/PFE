@@ -7,6 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ADMINISTRATOR</title>
     <link rel="stylesheet" href="../css/admindash2.css">
+    <style>
+    .lo-lo {
+        width: 3.5vw;
+        padding-top: 3%;
+        padding-left: 50%;
+    }
+    </style>
 </head>
 
 <body>
@@ -28,7 +35,7 @@ $num=mysqli_num_rows($queryy);
     <div class="hai">
         <div class="navbar">
             <div class="icon">
-                <h2 class="logo">C R W</h2>
+                <img class="lo-lo" src="../images/logo.png">
             </div>
             <div class="menu">
                 <ul>

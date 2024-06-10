@@ -4,6 +4,13 @@
 <head>
     <title>CAR RENTAL</title>
     <link rel="stylesheet" href="css/home.css">
+    <style>
+    .lo-lo {
+        width: 3.5vw;
+        padding-top: 9%;
+        padding-left: 50%;
+    }
+    </style>
 </head>
 
 <body>
@@ -45,7 +52,7 @@ require_once('components/connection.php');
     <div class="hai">
         <div class="navbar">
             <div class="icon">
-                <h2 class="logo"><img src="./images/logo.png" alt=""></h2>
+                <img class="lo-lo" src="./images/logo.png">
             </div>
             <div class="menu">
                 <ul>

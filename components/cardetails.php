@@ -78,6 +78,16 @@
     .lang-pad {
         padding-top: 10%;
     }
+
+    .lo-lo {
+        width: 3.5vw;
+        padding-top: 7%;
+        padding-left: 50%;
+    }
+
+    .overview {
+        font-family: Arial;
+    }
     </style>
 </head>
 
@@ -99,7 +109,7 @@
         <div class="main">
             <div class="navbar">
                 <div class="icon">
-                    <h2 class="logo"><img src="./images/logo.png" alt=""></h2>
+                    <img class="lo-lo" src="../images/logo.png">
                 </div>
                 <div class="menu">
                     <ul>

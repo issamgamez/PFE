@@ -1,18 +1,11 @@
-body{
-	background-image:url(Home%20page%20pics/background1.jpeg);
-	background-repeat:no-repeat;
-	background-attachment:fixed;
-	padding: 10%;
-}
+
 #navbar{
 	width:100%;
 	background-color:#fff;
 	opacity:1;
 
 }
-.btn{
 
-}
 #tab{
 	color:#283747;
 	font-size:18px; 
