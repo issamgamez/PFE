@@ -61,7 +61,7 @@ require_once('components/connection.php');
                     <li><a href="components/services.php">SERVICES</a></li>
 
                     <li><a href="components/contactus.html">CONTACT</a></li>
-                    <li> <button class="adminbtn"><a href="components/adminlogin.php">ADMIN LOGIN</a></button></li>
+                    <!-- <li> <button class="adminbtn"><a href="components/adminlogin.php">ADMIN LOGIN</a></button></li> -->
                 </ul>
             </div>
 

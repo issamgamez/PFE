@@ -219,7 +219,7 @@ if(isset($_POST['pay'])){
     $result = mysqli_query($con,$sql2);
     if($result){
       header("Location: psucess.php");
-    }
+    }   
   }
 
 }
@@ -229,10 +229,7 @@ if(isset($_POST['pay'])){
 
 
 
-
-
-
-    <h2 class="payment">TOTAL PAYMENT : <a><?php echo $email['PRICE']?>$</a></h2>
+    <h2 class="payment">TOTAL PAYMENT : <a><?php echo $email['PRICE']?>DH</a></h2>
 
     <div class="card">
         <form method="POST">
@@ -264,7 +261,7 @@ if(isset($_POST['pay'])){
             <script>
             </script>
         </form>
-
+ 
     </div>
 </body>
 

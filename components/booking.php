@@ -62,7 +62,17 @@
             
             if($result){
                 
-                $_SESSION['email'] =$uemail;
+                $_SESSION['EMAIL'] = $uemail;
+                $_SESSION['FULLNAME'] = $rows['LNAME'] ." ". $rows['FNAME'];
+                $_SESSION['CAR_NAME'] = $email['CAR_NAME'];
+                $_SESSION['CAR_IMG'] = $email['CAR_IMG'];
+                $_SESSION['BOOK_PLACE'] = $bplace;
+                $_SESSION['BOOK_DATE'] = $bdate;
+                $_SESSION['DURATION'] = $dur;
+                $_SESSION['PHONE_NUMBER'] = $phno;
+                $_SESSION['DESTINATION'] = $des;
+                $_SESSION['PRICE'] = $price;
+                $_SESSION['RETURN_DATE'] = $rdate;
                 header("Location: payment.php");
             }
             else{

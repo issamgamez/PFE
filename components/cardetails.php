@@ -65,7 +65,7 @@
 
 
     .box-im {
-        width: 17vw;
+        width: 20vw;
         height: 25vh;
         padding-bottom: 20%;
     }

@@ -54,12 +54,12 @@ $num=mysqli_num_rows($queryy);
                 <table class="content-table">
                     <thead>
                         <tr>
-                            <th class=" title-tab">CAR ID</th>
+                            <!-- <th class=" title-tab">CAR ID</th> -->
                             <th class=" title-tab">EMAIL</th>
                             <th class=" title-tab">BOOK PLACE</th>
                             <th class=" title-tab">BOOK DATE</th>
                             <th class=" title-tab hh">DURATION</th>
-                            <th class=" title-tab">PHONE NUMBER</th>
+                            <!-- <th class=" title-tab">PHONE NUMBER</th> -->
                             <th class=" title-tab">DESTINATION</th>
                             <th class=" title-tab">RETURN DATE</th>
                             <th class=" title-tab">BOOKING STATUS</th>
@@ -77,8 +77,8 @@ $num=mysqli_num_rows($queryy);
                 ?>
                         <tr class="active-row">
 
-                            <td class="tabl"><?php echo $res['CAR_ID'];?></php>
-                            </td>
+                            <!-- <td class="tabl"><?php echo $res['CAR_ID'];?></php>
+                            </td> -->
                             <td class="tabl"><?php echo $res['EMAIL'];?></php>
                             </td>
                             <td class="tabl"><?php echo $res['BOOK_PLACE'];?></php>
@@ -87,8 +87,8 @@ $num=mysqli_num_rows($queryy);
                             </td>
                             <td class="tabl"><?php echo $res['DURATION'];?></php>
                             </td>
-                            <td class="tabl"><?php echo $res['PHONE_NUMBER'];?></php>
-                            </td>
+                            <!-- <td class="tabl"><?php echo $res['PHONE_NUMBER'];?></php>
+                            </td> -->
                             <td class="tabl"><?php echo $res['DESTINATION'];?></php>
                             </td>
                             <td class="tabl"><?php echo $res['RETURN_DATE'];?></php>
